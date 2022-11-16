@@ -4,7 +4,7 @@ require "settings/init.php";
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodForfatter, :prodType, :prodTag, :prodForlag)";
+    $sql = "INSERT INTO boger (prodNavn, prodBeskrivelse, prodPris, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodForfatter, :prodType, :prodTag, :prodForlag)";
     $bind = [
             ":prodNavn" => $data["prodNavn"],
             ":prodBeskrivelse" => $data["prodBeskrivelse"],
@@ -84,8 +84,8 @@ if(!empty($_POST["data"])){
         </div>
         <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="ProdBeskrivelse">Produkt beskrivelse</label>
-                <textarea class="form-control" name="data[]" id=""></textarea>
+                <label for="prodBeskrivelse">Produkt beskrivelse</label>
+                <textarea class="form-control" name="data[prodBeskrivelse]" id="prodBeskrivelse"></textarea>
             </div>
         </div>
         <div class="col-12 col-md-6 offset-md-6">
