@@ -4,8 +4,8 @@ require "settings/init.php";
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris) VALUES(:prodNavn, :prodBeskrivelse, :prodPris)";
-    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"]];
+    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodForfatter, :prodtype, :prodTag, :prodForlag)";
+    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"], ":prodForfatter" => $data["prodForfatter"], ":prodType" => $data["prodType"], ":prodTag" => $data["prodTag"], ":prodForlag" => $data["prodForlag"]];
 
     $db->sql($sql, $bind,false );
 
@@ -52,7 +52,25 @@ if(!empty($_POST["data"])){
         </div>
         <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="Prodbeskrivelse">Produkt beskrivelse</label>
+                <label for="prodForfatter">Bogens Forfatter</label>
+                <input class="form-control" type="text" name="data[prodForfatter]" id="prodForfatter" placeholder="Bogens Forfatter" value="" >
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodTag">Bogens tags</label>
+                <input class="form-control" type="text" name="data[prodTag]" id="prodTag" placeholder="Bogens tags" value="" >
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodType">Type af pose</label>
+                <input class="form-control" type="text" name="data[prodType]" id="prodType" placeholder="Type af pose" value="" >
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="ProdBeskrivelse">Produkt beskrivelse</label>
                 <textarea class="form-control" name="data[]" id=""></textarea>
             </div>
         </div>
