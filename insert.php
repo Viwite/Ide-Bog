@@ -4,8 +4,16 @@ require "settings/init.php";
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodForfatter, :prodtype, :prodTag, :prodForlag)";
-    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"], ":prodForfatter" => $data["prodForfatter"], ":prodType" => $data["prodType"], ":prodTag" => $data["prodTag"], ":prodForlag" => $data["prodForlag"]];
+    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodForfatter, :prodType, :prodTag, :prodForlag)";
+    $bind = [
+            ":prodNavn" => $data["prodNavn"],
+            ":prodBeskrivelse" => $data["prodBeskrivelse"],
+            ":prodPris" => $data["prodPris"],
+            ":prodForfatter" => $data["prodForfatter"],
+            ":prodType" => $data["prodType"],
+            ":prodTag" => $data["prodTag"],
+            ":prodForlag" => $data["prodForlag"]
+    ];
 
     $db->sql($sql, $bind,false );
 
@@ -54,6 +62,12 @@ if(!empty($_POST["data"])){
             <div class="form-group">
                 <label for="prodForfatter">Bogens Forfatter</label>
                 <input class="form-control" type="text" name="data[prodForfatter]" id="prodForfatter" placeholder="Bogens Forfatter" value="" >
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="prodForlag">Bogens Forlag</label>
+                <input class="form-control" type="text" name="data[prodForlag]" id="prodForlag" placeholder="Bogens Forlag" value="" >
             </div>
         </div>
         <div class="col-12 col-md-6">
