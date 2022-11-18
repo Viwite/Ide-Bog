@@ -11,6 +11,7 @@
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.scss" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/b2cd0c4e29.js" crossorigin="anonymous"></script>
 
@@ -19,14 +20,13 @@
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <div class="boger">
-            <div class="filter p-5">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
-                        <input type="search" class="form-control nameSearch" placeholder="Søg og du skal finde">
-                    </div>
+    <div class="boger">
+        <div class="filter p-5">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <input type="search" class="form-control nameSearch" placeholder="Søg og du skal finde">
                 </div>
             </div>
         </div>
@@ -35,43 +35,42 @@
             <!--Produkterne-->
             <p>hej</p>
         </div>
-
     </div>
 
-    <?php
-    require "settings/init.php";
+</div>
 
-    $boger = $db->sql("SELECT * FROM boger");
+<?php
+require "settings/init.php";
 
-    foreach ($boger as $bog){
-        ?>
+$boger = $db->sql("SELECT * FROM boger");
 
-            <div class="flex-container-1"
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $bog->prodNavn; ?></h5>
-                                <p class="card-text"><?php echo $bog->prodBeskrivelse; ?></p>
-                                <p class="card-text"><?php echo $bog->prodForfatter; ?></p>
-                                <p class="card-text"><?php echo $bog->prodTag; ?></p>
-                                <p class="card-text"><?php echo $bog->prodForlag; ?></p>
-                                <p class="card-text"><?php echo $bog->prodPris; ?></p>
-                                <p class="card-text"><?php echo $bog->prodType; ?></p>
-                                <p class="card-text"><small class="text-muted"><?php echo $bog->prodDato; ?></small></p>
-                            </div>
-                        </div>
+/*foreach ($boger as $bog) {
+    */?><!--
+
+    <div class="flex-container-1"
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php /*echo $bog->prodNavn; */?></h5>
+                        <p class="class-header"><?php /*echo $bog->prodBeskrivelse; */?></p>
+                        <p class="forfatter"><?php /*echo $bog->prodForfatter; */?></p>
+                        <p class="hashtags"><?php /*echo $bog->prodTag; */?></p>
+                        <p class="class-header"><?php /*echo $bog->prodForlag; */?></p>
+                        <p class="class-header"><?php /*echo $bog->prodPris; */?></p>
+                        <p class="class-header"><?php /*echo $bog->prodType; */?></p>
+                        <p class="class-header"><small class="text-muted"><?php /*echo $bog->prodDato; */?></small></p>
                     </div>
                 </div>
             </div>
-        <?php
-    }
-    ?>
-
-
+        </div>
+    </div>
+    --><?php
+/*}*/
+?>
 
 
 <script src="node_modules/bootstrap/dist/js//bootstrap.bundle.min.js"></script>

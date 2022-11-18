@@ -37,7 +37,7 @@ export default class Boger {
                     <div class="card-body">
                         <h5 class="card-title">${item.prodNavn}</h5>
                         <p class="card-text">${item.prodBeskrivelse}</p>
-                        <a href="product.php?prodId=${item.prodId}" class="btn btn-primary text-white w-100">Se produkt</a>
+                        <a href="bog.php?prodId=${item.prodId}" class="btn btn-primary text-white w-100">Se produkt</a>
                     </div>
                     
                 </div>
@@ -47,12 +47,11 @@ export default class Boger {
         }
 
         this.items.innerHTML = '';
-        this.rootElem.appendChild(row);
+        this.items.appendChild(row);
     }
 
     async getData() {
         this.data.nameSearch = this.nameSearch.value;
-
         const response = await fetch('api.php', {
             method: "POST",
             body: JSON.stringify(this.data)
