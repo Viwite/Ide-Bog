@@ -65,10 +65,10 @@
 
 <script src="node_modules/bootstrap/dist/js//bootstrap.bundle.min.js"></script>
 <script type="module">
-    import Products from "./js/products.js";
+    import Boger from "./js/boger.js";
 
-    const products = new Products();
-    products.init();
+    const boger = new Boger();
+    boger.init();
 </script>
 </body>
 </html>
