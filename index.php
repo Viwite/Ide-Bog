@@ -48,13 +48,12 @@
         <div class="col-3">
             <?php echo $bog->prodNavn; ?>
             <?php echo $bog->prodDato; ?>
-            <?php echo $bog->prodBeskrivelser; ?>
+            <?php echo $bog->prodBeskrivelse; ?>
             <?php echo $bog->prodPris; ?>
             <?php echo $bog->prodForfatter; ?>
             <?php echo $bog->prodType; ?>
             <?php echo $bog->prodTag; ?>
             <?php echo $bog->prodForlag; ?>
-
         </div>
 
 
