@@ -32,15 +32,29 @@ export default class Boger {
             col.classList.add('col-md-6', 'col-lg-4', 'col-xl-3');
 
             col.innerHTML = `
-                <div class="card">
-                    <img src="uploads/${item.prodBillede}" class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title">${item.prodNavn}</h5>
-                        <p class="card-text">${item.prodBeskrivelse}</p>
-                        <a href="bog.php?prodId=${item.prodId}" class="btn btn-primary text-white w-100">Se produkt</a>
+                
+                <div class="flex-container-1"
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="..." class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.prodNavn}</h5>
+                                    <p class="class-header">${item.prodBeskrivelse}</p>
+                                    <p class="forfatter">${item.prodForfatter}</p>
+                                    <p class="hashtags">${item.prodTag}</p>
+                                    <p class="class-header">${item.prodForlag}</p>
+                                    <p class="class-header">${item.prodPris}</p>
+                                    <p class="class-header">${item.prodType}</p>
+                                    <p class="class-header"><small class="text-muted">${item.prodType}</small></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                </div>
+                 </div>
+                
             `;
 
             row.appendChild(col);
