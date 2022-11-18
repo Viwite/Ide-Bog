@@ -8,7 +8,7 @@ export default class Boger {
         this.filter = this.rootElem.querySelector('.filter');
         this.items = this.rootElem.querySelector('.items');
 
-        this.nameSearch = this.filter.querySelector('nameSearch');
+        this.nameSearch = this.filter.querySelector('.nameSearch');
     }
 
     async init() {
@@ -33,7 +33,7 @@ export default class Boger {
 
             col.innerHTML = `
                 <div class="card">
-                    <img src="" class="card-img-top">
+                    <img src="uploads/${item.prodBillede}" class="card-img-top" alt="image">
                     <div class="card-body">
                         <h5 class="card-title">${item.prodNavn}</h5>
                         <p class="card-text">${item.prodBeskrivelse}</p>
