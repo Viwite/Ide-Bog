@@ -25,3 +25,5 @@ if (isset($data["password"]) && $data["password"] == 'Fantasy') {
     $error["errorMessage"] = "Dit kodeord var forkert";
     echo json_encode($error);
 }
+
+?>
