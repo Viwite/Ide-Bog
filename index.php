@@ -45,17 +45,26 @@
 
     foreach ($boger as $bog){
         ?>
-        <div class="col-3">
-            <?php echo $bog->prodNavn; ?>
-            <?php echo $bog->prodDato; ?>
-            <?php echo $bog->prodBeskrivelse; ?>
-            <?php echo $bog->prodPris; ?>
-            <?php echo $bog->prodForfatter; ?>
-            <?php echo $bog->prodType; ?>
-            <?php echo $bog->prodTag; ?>
-            <?php echo $bog->prodForlag; ?>
-        </div>
 
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $bog->prodNavn; ?></h5>
+                        <p class="card-text"><?php echo $bog->prodBeskrivelse; ?></p>
+                        <p class="card-text"><?php echo $bog->prodForfatter; ?></p>
+                        <p class="card-text"><?php echo $bog->prodTag; ?></p>
+                        <p class="card-text"><?php echo $bog->prodForlag; ?></p>
+                        <p class="card-text"><?php echo $bog->prodPris; ?></p>
+                        <p class="card-text"><?php echo $bog->prodType; ?></p>
+                        <p class="card-text"><small class="text-muted"><?php echo $bog->prodDato; ?></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <?php
     }
