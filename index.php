@@ -46,10 +46,14 @@
     foreach ($boger as $bog){
         ?>
         <div class="col-3">
-            <?php echo $bog->prodName; ?>
+            <?php echo $bog->prodNavn; ?>
             <?php echo $bog->prodDato; ?>
+            <?php echo $bog->prodBeskrivelse; ?>
+            <?php echo $bog->prodPris; ?>
             <?php echo $bog->prodForfatter; ?>
-
+            <?php echo $bog->prodType; ?>
+            <?php echo $bog->prodTag; ?>
+            <?php echo $bog->prodForlag; ?>
         </div>
 
 
@@ -61,10 +65,10 @@
 
 <script src="node_modules/bootstrap/dist/js//bootstrap.bundle.min.js"></script>
 <script type="module">
-    import Products from "./js/products.js";
+    import Boger from "./js/boger.js";
 
-    const products = new Products();
-    products.init();
+    const boger = new Boger();
+    boger.init();
 </script>
 </body>
 </html>
