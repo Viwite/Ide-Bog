@@ -33,7 +33,7 @@ export default class Boger {
 
             col.innerHTML = `
                 
-                <div class="flex-container-1"
+                <div class="flex-container-1">
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
