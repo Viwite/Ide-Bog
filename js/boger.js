@@ -47,7 +47,6 @@ export default class Boger {
                                     <p class="hashtags">${item.prodTag}</p>
                                     <p class="class-header">${item.prodForlag}</p>
                                     <p class="class-header">${item.prodPris}</p>
-                                    <p class="class-header">${item.prodType}</p>
                                     <p class="class-header"><small class="text-muted">${item.prodType}</small></p>
                                 </div>
                             </div>
