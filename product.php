@@ -35,6 +35,12 @@
             </div>
         </div>
 
+        <?php
+        require "settings/init.php";
+
+        $boger = $db->sql("SELECT * FROM boger WHERE ID = items");
+        ?>
+
         <div class="items">
             <!--Produkterne-->
         </div>

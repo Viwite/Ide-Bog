@@ -13,7 +13,7 @@ export default class Boger {
 
     async init() {
         this.nameSearch.addEventListener('input', () => {
-            if(this.nameSearch.value.length >= 3){
+            if (this.nameSearch.value.length >= 3) {
                 this.render();
             }
         });
@@ -27,13 +27,13 @@ export default class Boger {
         const row = document.createElement('div');
         row.classList.add('row', 'g-4');
 
-        for(const item of data) {
+        for (const item of data) {
             const col = document.createElement('div');
             col.classList.add('col-md-6', 'col-lg-4', 'col-xl-3');
 
             col.innerHTML = `
                 
-                <div class="flex-container-1">
+                
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
@@ -53,7 +53,7 @@ export default class Boger {
                             </div>
                         </div>
                     </div>
-                 </div>
+                 
                 
             `;
 
