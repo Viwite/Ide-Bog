@@ -37,7 +37,7 @@ export default class Boger {
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="" class="img-fluid rounded-start" alt="...">
+                                <img src="uploads/A Clash of Kings.jpg)" class="img-fluid rounded-start" alt="bog">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">

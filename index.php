@@ -33,7 +33,6 @@
 
         <div class="items">
             <!--Produkterne-->
-            <p>hej</p>
         </div>
     </div>
 
