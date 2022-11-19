@@ -37,17 +37,18 @@ export default class Boger {
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="uploads/A Clash of Kings.jpg)" class="img-fluid rounded-start" alt="bog">
+                                <img src="uploads/${item.prodBillede}" class="img-fluid rounded-start" alt="bog">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">${item.prodNavn}</h5>
-                                    <p class="class-header">${item.prodBeskrivelse}</p>
+                                    <p class="class-text">${item.prodBeskrivelse}</p>
                                     <p class="forfatter">${item.prodForfatter}</p>
                                     <p class="hashtags">${item.prodTag}</p>
-                                    <p class="class-header">${item.prodForlag}</p>
-                                    <p class="class-header">${item.prodPris}</p>
-                                    <p class="class-header"><small class="text-muted">${item.prodType}</small></p>
+                                    <p class="class-text">${item.prodForlag}</p>
+                                    <p class="class-text">${item.prodPris}</p>
+                                    <p class="class-text"><small class="text-muted">${item.prodType}</small></p>
+                                    <a href="boger.php?prodId=${item.prodId}" class="btn btn-primary text-white w-100">Se bøger</a>
                                 </div>
                             </div>
                         </div>
