@@ -3,12 +3,19 @@ require "settings/init.php";
 
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
+    $file = $_FILES;
 
-    $sql = "INSERT INTO boger (prodNavn, prodBeskrivelse, prodPris, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodForfatter, :prodType, :prodTag, :prodForlag)";
+    if(!empty($file["prodBillede"]["tmp_name"])){
+        move_uploaded_file($file["prodBillede"]["tmp_name"], "uploads/" . basename($file["prodBillede"]["name"]));
+    }
+
+
+    $sql = "INSERT INTO boger (prodNavn, prodBeskrivelse, prodPris, prodBillede, prodForfatter, prodType, prodTag, prodForlag) VALUES(:prodNavn, :prodBeskrivelse, :prodPris, :prodBillede,:prodForfatter, :prodType, :prodTag, :prodForlag)";
     $bind = [
             ":prodNavn" => $data["prodNavn"],
             ":prodBeskrivelse" => $data["prodBeskrivelse"],
             ":prodPris" => $data["prodPris"],
+            ":prodBillede" => (!empty($file["prodBillede"]["tmp_name"])) ? $file["prodBillede"]["name"] : NULL,
             ":prodForfatter" => $data["prodForfatter"],
             ":prodType" => $data["prodType"],
             ":prodTag" => $data["prodTag"],
@@ -44,7 +51,7 @@ if(!empty($_POST["data"])){
 
 <body>
 
-<form method="post" action="insert.php">
+<form method="post" action="insert.php" enctype="multipart/form-data">
     <div class="row">
         <div class="col-12 col-md-6">
             <div class="form-group">
@@ -52,42 +59,54 @@ if(!empty($_POST["data"])){
                 <input class="form-control" type="text" name="data[prodNavn]" id="prodNavn" placeholder="Produkt navn" value="" >
             </div>
         </div>
+
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="prodPris">Produkt pris</label>
                 <input class="form-control" type="number" step="0.1" name="data[prodPris]" id="prodPris" placeholder="Produkt pris" value="" >
             </div>
         </div>
+
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="prodForfatter">Bogens Forfatter</label>
                 <input class="form-control" type="text" name="data[prodForfatter]" id="prodForfatter" placeholder="Bogens Forfatter" value="" >
             </div>
         </div>
+
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="prodForlag">Bogens Forlag</label>
                 <input class="form-control" type="text" name="data[prodForlag]" id="prodForlag" placeholder="Bogens Forlag" value="" >
             </div>
         </div>
+
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="prodTag">Bogens tags</label>
                 <input class="form-control" type="text" name="data[prodTag]" id="prodTag" placeholder="Bogens tags" value="" >
             </div>
         </div>
+
         <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="prodType">Type af pose</label>
-                <input class="form-control" type="text" name="data[prodType]" id="prodType" placeholder="Type af pose" value="" >
+                <label for="prodType">Bogens type</label>
+                <input class="form-control" type="text" name="data[prodType]" id="prodType" placeholder="Bogens type" value="" >
             </div>
         </div>
+
+        <div class="col-12">
+            <label class="form-label" for="prodBillede">Produkt billede</label>
+            <input type="file" class="form-control" id="prodBillede" name="prodBillede">
+        </div>
+
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="prodBeskrivelse">Produkt beskrivelse</label>
                 <textarea class="form-control" name="data[prodBeskrivelse]" id="prodBeskrivelse"></textarea>
             </div>
         </div>
+
         <div class="col-12 col-md-6 offset-md-6">
             <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
         </div>
