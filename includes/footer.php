@@ -1,6 +1,6 @@
-<footer class="container-fluid bg-light" ">
+<footer class="container-fluid" style="background: #c5a78d" ">
 
-    <div class="footer row" style="background: #e2ddd6">
+    <div class="footer row" style="background: #c5a78d">
         <div class="col-12 col-lg mb-5">
             <a class="navbar-brand class-text" href="index.php">Ide&Bog</a>
         </div>
