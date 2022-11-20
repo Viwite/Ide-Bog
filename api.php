@@ -15,6 +15,18 @@ if (isset($data["password"]) && $data["password"] == 'Fantasy') {
 
     }
 
+    if (!empty($data["nameSearch"])) {
+        $sql .= " AND prodTags LIKE CONCAT('%', :prodTags, '%') ";
+        $bind[":prodTags"] = $data["nameSearch"];
+
+    }
+
+    if (!empty($data["nameSearch"])) {
+        $sql .= " AND prodForfatter LIKE CONCAT('%', :prodForfatter, '%') ";
+        $bind[":prodForfatter"] = $data["nameSearch"];
+
+    }
+
     $boger = $db->sql($sql, $bind);
     header("HTTP/1.1 200 OK");
 
