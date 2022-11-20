@@ -62,7 +62,7 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
                                 echo $bog->prodNavn
                                 ?>
                             </h5>
-                            <p class="class-header">
+                            <p class="class-text">
                                 <?php
                                 echo $bog->prodBeskrivelse
                                 ?>
