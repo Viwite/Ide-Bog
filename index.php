@@ -71,14 +71,8 @@
             <p>Gifts</p>
             <p>Events</p>
             <p>Special Edition</p>
-            <p>Creations</p>
-            <p>Discovery box</p>
-            <p>Mix N' Match</p>
-            <p>Boxes</p>
-            <p>Birthdays</p>
         </div>
         <div class="footer-text col-12 col-lg text-center mt-5 mb-5" style="color: #4a2700">
-            <p>Our Chocolate</p>
             <p>Contact Us</p>
             <p>Returns</p>
             <p>FAQ</p>

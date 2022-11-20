@@ -60,53 +60,55 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
             </div>
         </div>
 
+    </div>
 </div>
-
     <br>
 
     <?php
     foreach ($boger as $bog){
         ?>
-        <div class="card col-12 mx-auto mb-3" style="text-align: left; max-width: 90%;">
-            <div class="row g-0">
-                <div class="col-md-4">
+        <div class="container-fluid w-100">
+            <div class="card col-12 mx-auto mb-3 w-100" style="text-align: left; max-width: 90%;">
+                <div class="row g-0">
+                    <div class="col-md-4 cover">
 
-                    <img src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg">
+                        <img src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg">
 
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body ">
-                        <h5 class="card-title">
-                            <?php
-                            echo $bog->prodNavn
-                            ?>
-                        </h5>
-                        <p class="class-header">
-                            <?php
-                            echo $bog->prodBeskrivelse
-                            ?>
-                        </p>
-                        <p class="class-text">
-                            <?php
-                            echo $bog->prodTags
-                            ?>
-                        </p>
-                        <p class="class-header">
-                            <?php
-                            echo $bog->prodForlag
-                            ?>
-                        </p>
-                        <p class="class-header">
-                            <?php
-                            echo number_format($bog->prodPris, 2, ",", ".");
-                            ?>
-                        </p>
-                        <p class="class-header">
-                            <?php
-                            echo $bog->prodType
-                            ?>
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ">
+                            <h5 class="card-title">
+                                <?php
+                                echo $bog->prodNavn
+                                ?>
+                            </h5>
+                            <p class="class-header">
+                                <?php
+                                echo $bog->prodBeskrivelse
+                                ?>
+                            </p>
+                            <p class="class-text">
+                                <?php
+                                echo $bog->prodTags
+                                ?>
+                            </p>
+                            <p class="class-header">
+                                <?php
+                                echo $bog->prodForlag
+                                ?>
+                            </p>
+                            <p class="class-header">
+                                <?php
+                                echo number_format($bog->prodPris, 2, ",", ".");
+                                ?>
+                            </p>
+                            <p class="class-header">
+                                <?php
+                                echo $bog->prodType
+                                ?>
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,14 +128,8 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
                 <p>Gifts</p>
                 <p>Events</p>
                 <p>Special Edition</p>
-                <p>Creations</p>
-                <p>Discovery box</p>
-                <p>Mix N' Match</p>
-                <p>Boxes</p>
-                <p>Birthdays</p>
             </div>
             <div class="footer-text col-12 col-lg text-center mt-5 mb-5" style="color: #4a2700">
-                <p>Our Chocolate</p>
                 <p>Contact Us</p>
                 <p>Returns</p>
                 <p>FAQ</p>
