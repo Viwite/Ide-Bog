@@ -49,32 +49,9 @@ require "settings/init.php";
 
 $boger = $db->sql("SELECT * FROM boger");
 
-/*foreach ($boger as $bog) {
-    */?><!--
 
-    <div class="flex-container-1"
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php /*echo $bog->prodNavn; */?></h5>
-                        <p class="class-header"><?php /*echo $bog->prodBeskrivelse; */?></p>
-                        <p class="forfatter"><?php /*echo $bog->prodForfatter; */?></p>
-                        <p class="hashtags"><?php /*echo $bog->prodTag; */?></p>
-                        <p class="class-header"><?php /*echo $bog->prodForlag; */?></p>
-                        <p class="class-header"><?php /*echo $bog->prodPris; */?></p>
-                        <p class="class-header"><?php /*echo $bog->prodType; */?></p>
-                        <p class="class-header"><small class="text-muted"><?php /*echo $bog->prodDato; */?></small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    --><?php
-/*}*/
+?>
+<?php
 ?>
 
 

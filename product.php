@@ -52,7 +52,7 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
                 <div class="row g-0">
                     <div class="col-md-4 cover">
 
-                        <img class="w-75 align-self-auto" src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg">
+                        <img class="w-75 align-self-auto" src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg" alt="billed">
 
                     </div>
                     <div class="col-md-8">
@@ -67,7 +67,7 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
                                 echo $bog->prodBeskrivelse
                                 ?>
                             </p>
-                            <p class="class-text">
+                            <p class="hashtags">
                                 <?php
                                 echo $bog->prodTags
                                 ?>
