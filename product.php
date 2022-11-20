@@ -29,7 +29,7 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
 
     <br>
 
-<div class="container-fluid">
+<div class="container-fluid" style="background: #ded9d1">
 
     <div class="boger">
         <div class="filter p-5">
@@ -42,21 +42,21 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
 
     </div>
 </div>
-    <br>
+
 
     <?php
     foreach ($boger as $bog){
         ?>
-        <div class="container-fluid w-100" style="margin: auto">
+        <div class="container-fluid w-100" style="margin: auto; background: #ded9d1">
             <div class="card col-12 mx-auto mb-3 w-75" style="text-align: left; max-width: 100%;">
-                <div class="row g-0">
+                <div class="row g-0" style="background: #faf6f2">
                     <div class="col-md-4 cover">
 
                         <img class="w-75 align-self-auto" src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg" alt="billed">
 
                     </div>
                     <div class="col-md-8">
-                        <div class="card-body ">
+                        <div class="card-body" >
                             <h5 class="card-title">
                                 <?php
                                 echo $bog->prodNavn
@@ -96,7 +96,6 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
         <?php
     }
     ?>
-<br>
 <?php include "includes/footer.php"; ?>
 
     <script src="node_modules/bootstrap/dist/js//bootstrap.bundle.min.js"></script>

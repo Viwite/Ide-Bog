@@ -34,7 +34,7 @@ export default class Boger {
             col.innerHTML = `
                 
                 
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3" style="max-width: 540px; background: #faf6f2;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="uploads/${item.prodBillede}" class="img-fluid rounded-start" alt="bog">
