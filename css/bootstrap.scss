@@ -14,10 +14,10 @@ $custom-colors: (
  */
 
 $custom-colors: (
-        "primary": #007bff,
-        "background": #faf6f2,
-        "foothead": #d4c5b4,
-        "secondary": #ded9d1
+        "brodtekst": #1c0c06,
+        "background": #f2e1be,
+        "linjer": #c5a78d,
+        "tagslinks": #bf7d56,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
