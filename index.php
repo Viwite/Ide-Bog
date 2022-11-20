@@ -22,7 +22,7 @@
 
 <?php include "includes/navigation.php"; ?>
 
-<div class="container-fluid" style="background: #ded9d1;">
+<div class="container-fluid" style="background: #f2e1be;">
 
     <div class="boger">
         <div class="filter p-5">
