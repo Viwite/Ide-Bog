@@ -48,7 +48,7 @@ export default class Boger {
                                     <p class="class-text">${item.prodForlag}</p>
                                     <p class="class-text">${item.prodPris}</p>
                                     <p class="class-text"><small class="text-muted">${item.prodType}</small></p>
-                                    <a href="boger.php?prodId=${item.prodId}" class="btn btn-primary text-white w-100">Se bøger</a>
+                                    <a href="product.php?prodId=${item.prodId}" class="btn btn-secondary text-white w-100">Se bøger</a>
                                 </div>
                             </div>
                         </div>
