@@ -27,9 +27,7 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
 <body>
 <?php include "includes/navigation.php"; ?>
 
-    <br>
-
-<div class="container-fluid" style="background: #ded9d1">
+<div class="container-fluid" style="background: #f2e1be">
 
     <div class="boger">
         <div class="filter p-5">
@@ -47,9 +45,9 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
     <?php
     foreach ($boger as $bog){
         ?>
-        <div class="container-fluid w-100" style="margin: auto; background: #ded9d1">
-            <div class="card col-12 mx-auto mb-3 w-75" style="text-align: left; max-width: 100%;">
-                <div class="row g-0" style="background: #faf6f2">
+        <div class="container-fluid h-auto " style="background: #f2e1be; padding-bottom: 80px;">
+            <div class="card col-12 mx-auto mb-3 w-75 border-dark shadow-lg" style="text-align: left; max-width: 100%;">
+                <div class="row g-0" style="background: #f2e1be">
                     <div class="col-md-4 cover">
 
                         <img class="w-75 align-self-auto" src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg" alt="billed">
