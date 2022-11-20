@@ -67,12 +67,12 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
     <?php
     foreach ($boger as $bog){
         ?>
-        <div class="container-fluid w-100">
-            <div class="card col-12 mx-auto mb-3 w-100" style="text-align: left; max-width: 90%;">
+        <div class="container-fluid w-100" style="margin: auto">
+            <div class="card col-12 mx-auto mb-3 w-75" style="text-align: left; max-width: 100%;">
                 <div class="row g-0">
                     <div class="col-md-4 cover">
 
-                        <img src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg">
+                        <img class="w-75 align-self-auto" src="uploads/harry%20potter%20and%20the%20order%20og%20the%20phoenix.jpg">
 
                     </div>
                     <div class="col-md-8">
