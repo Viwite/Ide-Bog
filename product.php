@@ -67,7 +67,7 @@ $boger = $db->sql("SELECT * FROM boger WHERE prodNavn = 'Harry Potter and the Or
                             </p>
                             <p class="hashtags">
                                 <?php
-                                echo $bog->prodTags
+                                echo $bog->prodTag
                                 ?>
                             </p>
                             <p class="class-header">

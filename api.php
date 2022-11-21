@@ -10,8 +10,8 @@ if (isset($data["password"]) && $data["password"] == 'Fantasy') {
     $bind = [];
 
     if (!empty($data["nameSearch"])) {
-        $sql .= " AND prodNavn LIKE CONCAT('%', :prodNavn, '%') ";
-        $bind[":prodNavn"] = $data["nameSearch"];
+        $sql .= " AND (prodNavn LIKE CONCAT('%', :nameSearch, '%') OR prodForfatter LIKE CONCAT('%', :nameSearch, '%') OR prodTag LIKE CONCAT('%', :nameSearch, '%')) ";
+        $bind[":nameSearch"] = $data["nameSearch"];
 
     }
 
