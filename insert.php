@@ -24,7 +24,7 @@ if(!empty($_POST["data"])){
 
     $db->sql($sql, $bind,false );
 
-    echo "Produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</a>";
+    echo "<h2 class='headline' style='text-align: center; padding-top: 50px; font-family: Marco, serif;font-style: normal;font-weight: 400;'>Produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</h2></a>";
     exit;
 }
 ?>

@@ -26,8 +26,6 @@
 
     <br>
 
-    <hr><hr>
-
     <div class="boger">
         <div class="filter p-2">
             <div class="row">
@@ -39,10 +37,11 @@
 
         <hr><hr>
 
+        <h1 class="class-text p-1" style="text-align: center">Bøger</h1>
 
-        <br><br><br>
+        <hr><hr>
 
-        <div class="items">
+        <div class="items mt-5">
             <!--Produkterne-->
         </div>
     </div>
