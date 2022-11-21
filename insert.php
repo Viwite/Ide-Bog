@@ -24,7 +24,9 @@ if(!empty($_POST["data"])){
 
     $db->sql($sql, $bind,false );
 
-    echo "<h2 class='headline' style='text-align: center; padding-top: 50px; font-family: Marco, serif;font-style: normal;font-weight: 400;'>Produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</h2></a>";
+    echo "<h2 class='headline' style='text-align: center; padding-top: 50px; font-family: Marco, serif;font-style: normal;font-weight: 400;'>Produktet er nu indsat. 
+          <a href='insert.php'>Indsæt et produkt mere</h2></a>
+          <img class='img-fluid' style='width: 10%; margin-left: 50%' src='uploads/thumbs-up.png'>";
     exit;
 }
 ?>
