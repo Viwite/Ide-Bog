@@ -24,14 +24,23 @@
 
 <div class="container-fluid" style="background: #f2e1be;">
 
+    <br>
+
+    <hr><hr>
+
     <div class="boger">
-        <div class="filter p-5">
+        <div class="filter p-2">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
                     <input type="search" class="form-control nameSearch" placeholder="Søg og du skal finde">
                 </div>
             </div>
         </div>
+
+        <hr><hr>
+
+
+        <br><br><br>
 
         <div class="items">
             <!--Produkterne-->
