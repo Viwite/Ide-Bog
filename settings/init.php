@@ -3,10 +3,10 @@ require "classes/classDB.php";
 
 define("CONFIG_LIVE", "0"); // 0: Test enviroment || 1: Live enviroment
 
-if(CONFIG_LIVE == 1){
-    $DB_SERVER = "olinep.dk.mysql";
-    $DB_NAME = "olinep_dkboger";
-    $DB_USER = "olinep_dkboger@10.27.4.48";
+if(CONFIG_LIVE == 0){
+    $DB_SERVER = "localhost";
+    $DB_NAME = "Ide-Bog";
+    $DB_USER = "root";
     $DB_PASS = "";
 }else{
     $DB_SERVER = "";
